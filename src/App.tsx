@@ -1,11 +1,12 @@
+import Card from "./components/Card"
 
 function App() {
 
 
   return (
-    <h1 className="text-3xl font-bold text-red-800">
-      Hello world!
-    </h1>
+   <main className="flex justify-center items-center h-screen">
+    <Card/>
+   </main>
   )
 }
 
