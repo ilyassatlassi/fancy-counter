@@ -4,7 +4,7 @@ function App() {
 
 
   return (
-   <main className="flex justify-center items-center h-screen">
+   <main className="flex justify-center items-center h-full w-full">
     <Card/>
    </main>
   )
