@@ -1,22 +1,16 @@
-import { useState } from "react"
-import IncreaseCount from "./IncreaseCount"
-import ReduceCount from "./ReduceCount"
-import ResetButton from "./ResetButton"
 
+type countProps = {
+  count: number
+}
 
-const Counter = () => {
-    const [count, setCount] = useState(0)
-  
+const Counter = ({count} :countProps) => {
+
   return (
     <>
-    <span>{count}</span>
-  <div className="flex">
-      <IncreaseCount count={count} setCount={setCount}/>
-      <ReduceCount count={count} setCount={setCount}/>
-      <ResetButton count={count} setCount={setCount}/>
-  </div>
+      <span className="tect-[#1d2507] font-semibold mt-3 text-[200px]">{count}</span>
+
     </>
-    
+
   )
 }
 
