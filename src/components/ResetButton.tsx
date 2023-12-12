@@ -1,7 +1,12 @@
-import { IncreaseCountProps } from "./IncreaseCount"
 import { ResetIcon } from "@radix-ui/react-icons";
 
-const ResetButton = ({ count, setCount } : IncreaseCountProps ) => {
+type ResetProps = {
+  count: number,
+  setCount: React.Dispatch<React.SetStateAction<number>>
+}
+
+
+const ResetButton = ({ count, setCount } : ResetProps ) => {
   return (
 <button className="cursor-pointer opacity-30 mb-4 transition-all duration-500 hover:opacity-50 focus:opacity-50" onClick={()=> {
     if(count > 0) {setCount((prev: number) => prev = 0)}
