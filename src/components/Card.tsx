@@ -9,15 +9,11 @@ const Card = () => {
     const [count, setCount] = useState(0)
     useEffect(() => {
         const handleKeydown = (event:any) => {
-          if (event.code === "Space") {
-            setCount(count + 1)
-            // const newCount = count + 1;
-        //     if (newCount > 5) {
-        //       setCount(5);
-        //       return;
-        //     }
-        //     setCount(newCount);
-          }
+            if (event.code === "ArrowUp") {
+                setCount(count + 1);
+              } else if (event.code === "ArrowDown") {
+                setCount(count - 1);
+              }
         }
     
         window.addEventListener("keydown", handleKeydown);
