@@ -12,7 +12,7 @@ const Card = () => {
             if (event.code === "ArrowUp") {
                 setCount(count + 1);
               } else if (event.code === "ArrowDown") {
-                setCount(count - 1);
+                setCount(Math.max(count - 1, 0));
               }
         }
     
