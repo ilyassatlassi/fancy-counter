@@ -8,7 +8,7 @@ export type IncreaseCountProps = {
 }
 const CountButtons = ({ type, count, setCount } : IncreaseCountProps ) => {
   const IconsStyle = "inset-0 absolute m-auto text-[#bdfe00] opacity-90 h-10 w-10"
-  const handleClick = () => {
+  const handleClick = (e:any) => {
     setCount( (prev: number)  => {
       if (type === "minus"  ){
         if(count <= 0){
@@ -19,6 +19,7 @@ const CountButtons = ({ type, count, setCount } : IncreaseCountProps ) => {
         return prev + 1
       }
     })
+    e.currentTarget.blur()
     }
   return (
     <button className="w-1/2 relative hover:bg-[#212b06] focus:bg-[#212b06] cursor-pointer transition-all duration-500" onClick={handleClick}>
